@@ -410,15 +410,21 @@ section {
     margin-bottom: 2rem;
 }
 
+/* Apply sticky to the whole stats container, not individual items */
+.hero-stats {
+    position: sticky;
+    top: 10px; /* distance from viewport top */
+    background-color: inherit; /* maintain background */
+    z-index: 10; /* ensures it stays on top */
+    padding: 0.5rem 0; /* optional */
+}
+
+/* Keep stat items as flex columns without sticky */
 .stat-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    position: sticky;
-    top: 10px; /* Adjust this value to how far from the top you want it to stick */
-    background-color: inherit; /* keep the background consistent */
-    z-index: 10; /* ensure it stays above other content */
-    padding: 0.5rem 0; /* optional padding for spacing */
+    /* Remove sticky from here */
 }
 
 /* Existing styles */
