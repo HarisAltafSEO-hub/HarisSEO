@@ -11,52 +11,44 @@ if (hamburger) {
 }
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const stats = document.querySelectorAll('.stat-number');
-    let statsStarted = false;
+const counterElements = document.querySelectorAll('.stat-number');
+let hasAnimated = false;
 
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
-    }
+function animateCounters() {
+    counterElements.forEach(element => {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
 
-    function runCountUp() {
-        stats.forEach(stat => {
-            const target = +stat.getAttribute('data-target');
-            const duration = 2000; // animation duration in ms
-            let start = 0;
-            const increment = target / (duration / 16); // approx 60fps
-
-            function update() {
-                start += increment;
-                if (start < target) {
-                    stat.textContent = Math.ceil(start);
-                    requestAnimationFrame(update);
-                } else {
-                    stat.textContent = target;
-                }
+        const counter = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target;
+                clearInterval(counter);
+            } else {
+                element.textContent = Math.floor(current);
             }
-            update();
+        }, 16);
+    });
+}
+
+const statsSection = document.querySelector('.hero-stats'); // use your actual stats container class
+
+if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+            }
         });
-    }
+    }, { threshold: 0.5 });
 
-    function checkStats() {
-        if (!statsStarted && isElementInViewport(document.querySelector('.hero-stats'))) {
-            runCountUp();
-            statsStarted = true;
-            window.removeEventListener('scroll', checkStats);
-        }
-    }
+    statsObserver.observe(statsSection);
+}
 
-    window.addEventListener('scroll', checkStats);
-    // Also check once on load in case section is already visible
-    checkStats();
-});
-</script>
 
 
 
