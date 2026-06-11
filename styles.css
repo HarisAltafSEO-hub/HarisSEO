@@ -403,12 +403,7 @@ section {
     line-height: 1.8;
 }
 
-.hero-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
+
 
 /* Apply sticky to the whole stats container, not individual items */
 .hero-stats {
