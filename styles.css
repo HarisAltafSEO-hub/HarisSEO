@@ -408,7 +408,7 @@ section {
 /* Apply sticky to the whole stats container, not individual items */
 .hero-stats {
     position: sticky;
-    top: 10px; /* distance from viewport top */
+    top: 5px; /* distance from viewport top */
     background-color: inherit; /* maintain background */
     z-index: 10; /* ensures it stays on top */
     padding: 0.5rem 0; /* optional */
