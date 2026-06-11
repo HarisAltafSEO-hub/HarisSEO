@@ -47,14 +47,22 @@
     object-fit: contain;
 }
 
-.logo-text {
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    white-space: nowrap;
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between logo and text */
+    text-decoration: none;
 }
 
-
+.logo-text {
+    font-size: 1.25rem; /* adjust size as needed */
+    font-weight: 600;
+    color: #ffffff; /* change color to match navbar text */
+    font-family: 'Inter', sans-serif; /* match your site font */
+    white-space: nowrap;
+}
 
 
 
