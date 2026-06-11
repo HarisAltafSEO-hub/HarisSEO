@@ -34,34 +34,29 @@
 
 
 
-.logo-wrapper {
+/* Container for logo and text */
+.logo-wrapper, .logo-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* space between logo and text */
     text-decoration: none;
 }
 
+/* Logo image */
 .site-logo {
-    width: 45px;   /* smaller logo */
+    width: 45px;      /* adjust size as needed */
     height: 45px;
     object-fit: contain;
 }
 
-
-
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* spacing between logo and text */
-    text-decoration: none;
-}
-
+/* Text next to logo */
 .logo-text {
-    font-size: 1.25rem; /* adjust size as needed */
+    font-size: 1.2rem; /* slightly smaller for better balance */
     font-weight: 600;
-    color: #ffffff; /* change color to match navbar text */
-    font-family: 'Inter', sans-serif; /* match your site font */
+    color: #ffffff;    /* ensure visibility on dark navbar */
+    font-family: 'Inter', sans-serif;
     white-space: nowrap;
+    line-height: 1;    /* vertically center text better */
 }
 
 
