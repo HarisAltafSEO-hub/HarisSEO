@@ -10,6 +10,57 @@ if (hamburger) {
     });
 }
 
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const stats = document.querySelectorAll('.stat-number');
+    let statsStarted = false;
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function runCountUp() {
+        stats.forEach(stat => {
+            const target = +stat.getAttribute('data-target');
+            const duration = 2000; // animation duration in ms
+            let start = 0;
+            const increment = target / (duration / 16); // approx 60fps
+
+            function update() {
+                start += increment;
+                if (start < target) {
+                    stat.textContent = Math.ceil(start);
+                    requestAnimationFrame(update);
+                } else {
+                    stat.textContent = target;
+                }
+            }
+            update();
+        });
+    }
+
+    function checkStats() {
+        if (!statsStarted && isElementInViewport(document.querySelector('.hero-stats'))) {
+            runCountUp();
+            statsStarted = true;
+            window.removeEventListener('scroll', checkStats);
+        }
+    }
+
+    window.addEventListener('scroll', checkStats);
+    // Also check once on load in case section is already visible
+    checkStats();
+});
+</script>
+
+
+
+
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
