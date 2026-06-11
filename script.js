@@ -10,17 +10,18 @@ if (hamburger) {
     });
 }
 
-
-const counterElements = document.querySelectorAll('.stat-number');
+/* ========== COUNTER ANIMATION ========== */
+const counterElements = document.querySelectorAll('[data-target]');
 let hasAnimated = false;
 
-function animateCounters() {
+const animateCounters = () => {
     counterElements.forEach(element => {
         const target = parseInt(element.getAttribute('data-target'));
         const duration = 2000;
+        const start = 0;
         const increment = target / (duration / 16);
-        let current = 0;
 
+        let current = start;
         const counter = setInterval(() => {
             current += increment;
             if (current >= target) {
@@ -31,10 +32,9 @@ function animateCounters() {
             }
         }, 16);
     });
-}
+};
 
-const statsSection = document.querySelector('.hero-stats'); // use your actual stats container class
-
+const statsSection = document.querySelector('.stats');
 if (statsSection) {
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -48,10 +48,6 @@ if (statsSection) {
 
     statsObserver.observe(statsSection);
 }
-
-
-
-
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -101,45 +97,6 @@ document.querySelectorAll('.service-card, .skill-category, .project-card, .testi
     el.classList.add('reveal');
     observer.observe(el);
 });
-
-/* ========== COUNTER ANIMATION ========== */
-const counterElements = document.querySelectorAll('[data-target]');
-let hasAnimated = false;
-
-const animateCounters = () => {
-    counterElements.forEach(element => {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
-        const start = 0;
-        const increment = target / (duration / 16);
-
-        let current = start;
-        const counter = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(counter);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 16);
-    });
-};
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasAnimated) {
-                hasAnimated = true;
-                animateCounters();
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statsObserver.observe(statsSection);
-}
 
 /* ========== CONTACT FORM ========== */
 const contactForm = document.getElementById('contactForm');
