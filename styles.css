@@ -414,8 +414,14 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    position: sticky;
+    top: 10px; /* Adjust this value to how far from the top you want it to stick */
+    background-color: inherit; /* keep the background consistent */
+    z-index: 10; /* ensure it stays above other content */
+    padding: 0.5rem 0; /* optional padding for spacing */
 }
 
+/* Existing styles */
 .stat-number {
     font-family: var(--font-heading);
     font-size: 1.875rem;
