@@ -33,33 +33,60 @@
    ===================================================== */
 
 
-
-/* Container for logo and text */
-.logo-wrapper, .logo-link {
+/* Logo main container */
+.nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px; /* space between logo and text */
+    height: 100%;
+}
+
+/* Logo + Text */
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
+    height: 56px;
+    padding: 0 14px;
 }
 
 /* Logo image */
 .site-logo {
-    width: 45px;      /* adjust size as needed */
-    height: 45px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
+    display: block;
+    flex-shrink: 0;
 }
 
-/* Text next to logo */
+/* Logo text */
 .logo-text {
-    font-size: 1.2rem; /* slightly smaller for better balance */
-    font-weight: 600;
-    color: #ffffff;    /* ensure visibility on dark navbar */
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
+    line-height: 1;
     white-space: nowrap;
-    line-height: 1;    /* vertically center text better */
+    letter-spacing: -0.3px;
 }
 
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .logo-link {
+        gap: 7px;
+        padding: 0 10px;
+        height: 50px;
+    }
 
+    .site-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 15px;
+    }
+}
 
 
 
