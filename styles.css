@@ -419,7 +419,11 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* Remove sticky from here */
+    position: sticky;
+    top: 3px; /* Adjust this value to how far from the top you want it to stick */
+    background-color: inherit; /* keep the background consistent */
+    z-index: 10; /* ensure it stays above other content */
+    padding: 0.5rem 0; /* optional padding for spacing */
 }
 
 /* Existing styles */
@@ -435,6 +439,7 @@ section {
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
 }
+
 
 .hero-buttons {
     display: flex;
