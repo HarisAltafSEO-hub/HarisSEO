@@ -555,6 +555,7 @@ section {
     background: var(--gradient-primary);
     color: var(--white);
     box-shadow: var(--shadow-md);
+    margin-bottom: 5px;
 }
 
 .btn-primary:hover {
