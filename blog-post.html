@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags (will be updated via JavaScript) -->
+    <meta name="description" content="Read the latest blog post about SEO, WordPress, and digital marketing">
+    <meta name="keywords" content="SEO, Digital Marketing, WordPress">
+    <meta name="author" content="Haris Altaf">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Blog Post - Haris Altaf SEO">
+    <meta property="og:description" content="Read the latest blog post">
+    <meta property="og:url" id="ogUrl" content="">
+    <meta property="og:image" id="ogImage" content="">
+    
+    <!-- Article specific -->
+    <meta property="article:author" content="Haris Altaf">
+    <meta property="article:published_time" id="publishedTime" content="">
+    
+    <title>Blog Post - Haris Altaf</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo (2).png">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html" class="logo-link">
+                <img src="logo (2).png" alt="Haris Altaf SEO Logo" class="site-logo">
+                <span class="logo-text">Haris Altaf SEO</span>
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="index.html#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="index.html#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+                <a href="Resume A4.jpg" class="nav-link nav-link-resume" download>Resume</a>
+            </li>
+        </ul>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Blog Post Header -->
+<section class="blog-post-header" id="postHeader">
+    <div class="container">
+        <div class="post-header-content">
+            <div class="post-category" id="postCategory"></div>
+            <h1 id="postTitle"></h1>
+            <div class="post-meta">
+                <span class="post-author">
+                    <i class="fas fa-user"></i>
+                    <span id="postAuthor"></span>
+                </span>
+                <span class="post-date">
+                    <i class="fas fa-calendar"></i>
+                    <span id="postDate"></span>
+                </span>
+                <span class="post-time">
+                    <i class="fas fa-clock"></i>
+                    <span id="postReadTime"></span> min read
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Post Content -->
+<section class="blog-post-section">
+    <div class="container">
+        <div class="blog-post-wrapper">
+            <!-- Main Content -->
+            <article class="blog-post-content">
+                <!-- Featured Image -->
+                <div class="post-featured-image" id="postFeaturedImage"></div>
+                
+                <!-- Post Body -->
+                <div class="post-body" id="postBody"></div>
+                
+                <!-- Post Tags -->
+                <div class="post-tags" id="postTags"></div>
+                
+                <!-- Author Bio -->
+                <div class="author-bio">
+                    <h3>About the Author</h3>
+                    <p><strong>Haris Altaf</strong> is an experienced SEO specialist, Google Ads manager, and WordPress developer. With over 3 years of experience, Haris helps businesses grow online through strategic digital marketing and web development.</p>
+                    <div class="author-socials">
+                        <a href="mailto:harisaltaf123450@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/haris-altaf-6ab472381/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/923715428582" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Related Posts -->
+                <section class="related-posts">
+                    <h3>Related Posts</h3>
+                    <div class="related-posts-grid" id="relatedPosts"></div>
+                </section>
+            </article>
+            
+            <!-- Sidebar -->
+            <aside class="blog-post-sidebar">
+                <!-- Table of Contents -->
+                <div class="sidebar-widget toc-widget">
+                    <h3>Table of Contents</h3>
+                    <div class="toc-list" id="tableOfContents"></div>
+                </div>
+                
+                <!-- Recent Posts -->
+                <div class="sidebar-widget recent-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts" id="recentPosts"></ul>
+                </div>
+                
+                <!-- Newsletter Signup -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h3>Subscribe to Newsletter</h3>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <p>Get the latest SEO tips and digital marketing strategies delivered to your inbox.</p>
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- Navigation to other posts -->
+<section class="post-navigation">
+    <div class="container">
+        <div class="nav-posts" id="postNavigation"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Haris Altaf. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="robots.txt">Robots.txt</a>
+                <a href="sitemap.xml">Sitemap</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Blog Posts Data and Scripts -->
+<script src="blog-posts.js"></script>
+<script src="blog-post-script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
