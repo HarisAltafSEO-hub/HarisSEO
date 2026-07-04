@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read latest blogs about SEO, WordPress, Google Ads, and digital marketing tips by Haris Altaf">
+    <meta name="keywords" content="SEO Blog, WordPress Tips, Google Ads, Digital Marketing, SEO Strategies">
+    <meta name="author" content="Haris Altaf">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://harisaltafseo-hub.github.io/HarisSEO/blog.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog - Haris Altaf SEO">
+    <meta property="og:description" content="Latest blogs about SEO, WordPress, Google Ads, and digital marketing">
+    <meta property="og:url" content="https://harisaltafseo-hub.github.io/HarisSEO/blog.html">
+    <meta property="og:image" content="logo (2).png">
+    
+    <title>Blog - Haris Altaf | SEO & Digital Marketing Tips</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo (2).png">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html" class="logo-link">
+                <img src="logo (2).png" alt="Haris Altaf SEO Logo" class="site-logo">
+                <span class="logo-text">Haris Altaf SEO</span>
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="index.html#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="index.html#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+                <a href="Resume A4.jpg" class="nav-link nav-link-resume" download>Resume</a>
+            </li>
+        </ul>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Blog Header -->
+<section class="blog-header">
+    <div class="container">
+        <div class="blog-header-content">
+            <h1>Latest Blog Posts</h1>
+            <p>SEO Tips, WordPress Tutorials, and Digital Marketing Strategies</p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="blog-section">
+    <div class="container">
+        <div class="blog-wrapper">
+            <!-- Blog Posts Grid -->
+            <div class="blog-main">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog posts will be loaded here by JavaScript -->
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading posts...</p>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="blog-pagination" id="blogPagination"></div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Search Box -->
+                <div class="sidebar-widget search-widget">
+                    <h3>Search Posts</h3>
+                    <form id="searchForm" class="search-form">
+                        <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Categories -->
+                <div class="sidebar-widget categories-widget">
+                    <h3>Categories</h3>
+                    <ul class="categories-list" id="categoriesList">
+                        <!-- Categories will be loaded here -->
+                    </ul>
+                </div>
+                
+                <!-- Recent Posts -->
+                <div class="sidebar-widget recent-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts" id="recentPosts">
+                        <!-- Recent posts will be loaded here -->
+                    </ul>
+                </div>
+                
+                <!-- Tags -->
+                <div class="sidebar-widget tags-widget">
+                    <h3>Popular Tags</h3>
+                    <div class="tags-list" id="tagsList">
+                        <!-- Tags will be loaded here -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 Haris Altaf. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="robots.txt">Robots.txt</a>
+                <a href="sitemap.xml">Sitemap</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Blog Posts Data and Scripts -->
+<script src="blog-posts.js"></script>
+<script src="blog-script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
