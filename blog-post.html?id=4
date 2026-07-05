@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Is Haris Altaf? SEO Specialist & Content Writer | Profile</title>
+<meta name="description" content="Haris Altaf is an SEO specialist and content writer from Abbottabad, Pakistan with 3+ years of experience in keyword research, on-page SEO, local SEO, and WordPress optimization. Learn about his background, skills, and experience.">
+<meta name="author" content="Haris Altaf">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Who Is Haris Altaf? SEO Specialist & Content Writer">
+<meta property="og:description" content="A complete profile of Haris Altaf: SEO specialist and content writer with 3+ years of experience in keyword research, on-page SEO, local SEO, and WordPress optimization.">
+<meta property="og:url" content="https://harisaltafseo-hub.github.io/HarisSEO/who-is-haris-altaf-seo.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Who Is Haris Altaf? SEO Specialist & Content Writer">
+<meta name="twitter:description" content="A complete profile of Haris Altaf: SEO specialist and content writer with 3+ years of experience in keyword research, on-page SEO, local SEO, and WordPress optimization.">
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Haris Altaf?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haris Altaf is an SEO specialist and content writer based in Abbottabad, Pakistan, working remotely with clients worldwide. He focuses on keyword research, on-page and technical SEO, local SEO, WordPress optimization, and SEO content writing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Haris Altaf specialize in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He specializes in on-page SEO, local SEO, technical SEO basics, keyword research, competitor analysis, SEO content writing, and WordPress publishing using tools like Google Search Console, Google Analytics, SEMrush, and Ahrefs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much experience does Haris Altaf have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He has more than three years of experience across SEO specialist, content writer, and content strategist roles for various companies and client projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications does Haris Altaf hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He holds the Google Analytics Individual Qualification (GAIQ), a HubSpot Content Marketing Certification, and a SEMrush SEO Toolkit Certification, all earned in 2025."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I contact or hire Haris Altaf?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He can be reached through his portfolio website or his LinkedIn profile, where his services, project history, and contact details are listed."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --navy: #0f1b3d;
+    --navy-deep: #0a1330;
+    --gold: #c9a355;
+    --gold-light: #e4c98a;
+    --paper: #f7f5f0;
+    --ink: #1c2230;
+    --muted: #5b6478;
+    --rule: #e2ddd0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height: 1.7;
+  }
+
+  header.hero {
+    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: #fff;
+    padding: 72px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header.hero::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(201,163,85,0.15);
+    border-radius: 50%;
+  }
+
+  .hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--gold-light);
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.2;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: #cfd4e2;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  .meta-row {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--gold-light);
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 100px;
+  }
+
+  .quick-facts {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin: -32px 0 44px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .quick-facts h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  .quick-facts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    font-size: 15px;
+  }
+
+  .quick-facts li strong {
+    display: block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+
+  h2.section-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 52px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  p { font-size: 17px; color: var(--ink); }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .skill-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+
+  .skill-card h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--navy);
+    margin: 0 0 8px;
+  }
+
+  .skill-card p {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .timeline {
+    margin-top: 20px;
+    border-left: 2px solid var(--rule);
+    padding-left: 24px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .timeline-item .role {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 16.5px;
+  }
+
+  .timeline-item .dates {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2px 0 8px;
+  }
+
+  .timeline-item p { font-size: 15.5px; margin: 0; color: var(--ink); }
+
+  .cert-list, .fact-list {
+    padding-left: 20px;
+  }
+  .cert-list li, .fact-list li { margin-bottom: 8px; font-size: 16px; }
+
+  .note {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--muted);
+    background: #fff;
+    border: 1px dashed var(--rule);
+    padding: 16px 18px;
+    border-radius: 4px;
+    margin-top: 40px;
+  }
+
+  .cta {
+    margin-top: 44px;
+    padding: 28px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .cta p { color: #cfd4e2; margin: 0 0 16px; font-size: 16px; }
+
+  .cta a {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .cta a.primary { background: var(--gold); color: var(--navy-deep); }
+  .cta a.secondary { border: 1px solid var(--gold-light); color: var(--gold-light); }
+
+  /* FAQ */
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 0;
+  }
+  .faq-item summary {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16.5px;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-size: 22px;
+    color: var(--gold);
+    margin-left: 12px;
+    transition: transform 0.2s ease;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p {
+    margin: 12px 0 0;
+    font-size: 15.5px;
+    color: var(--muted);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 24px 50px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 560px) {
+    .quick-facts ul, .skill-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">SEO Profile</div>
+    <h1>Who Is Haris Altaf?</h1>
+    <p class="hero-sub">Meet the SEO specialist and content writer helping businesses improve rankings, traffic, and visibility on Google.</p>
+    <div class="meta-row">
+      <span>📍 Abbottabad, Pakistan (Remote)</span>
+      <span>✉️ harisaltaf123450@gmail.com</span>
+      <span>🔗 linkedin.com/in/haris-altaf-6ab472381</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="quick-facts">
+    <h2>Quick Facts</h2>
+    <ul>
+      <li><strong>Role</strong>SEO Specialist &amp; Content Writer</li>
+      <li><strong>Experience</strong>3+ years</li>
+      <li><strong>Location</strong>Abbottabad, Pakistan (Remote)</li>
+      <li><strong>Focus</strong>SEO, Content, WordPress, Google Ads</li>
+      <li><strong>Portfolio</strong><a href="https://harisaltafseo-hub.github.io/HarisSEO/">harisaltafseo-hub.github.io/HarisSEO</a></li>
+      <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/haris-altaf-6ab472381/">haris-altaf-6ab472381</a></li>
+    </ul>
+  </div>
+
+  <p>If you've searched for "Haris Altaf SEO," you've probably landed on his portfolio site, LinkedIn profile, or resume — and you're wondering exactly who he is and what he does. Here's a complete breakdown of his background, skills, and experience.</p>
+
+  <h2 class="section-title">Professional Background</h2>
+  <p>Haris Altaf is an SEO Specialist and Content Writer with expertise across keyword research, on-page SEO, local SEO, foundational technical SEO, content strategy, and WordPress publishing. His work centers on writing and optimizing blog posts, service pages, and metadata — while using data from Google Search Console, Google Analytics, SEMrush, and Ahrefs to track and improve performance over time.</p>
+  <p>His portfolio site also positions him as a Google Ads Manager and WordPress developer, reflecting a skill set that extends beyond SEO into paid search campaigns and website development.</p>
+
+  <h2 class="section-title">Core Skills</h2>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <h3>SEO</h3>
+      <p>On-page, off-page, technical, local, and e-commerce SEO, keyword research, competitor analysis, site audits, and link building.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Content Writing</h3>
+      <p>SEO blog writing, website copy, content briefs, content refreshes, editing, and search-intent alignment.</p>
+    </div>
+    <div class="skill-card">
+      <h3>WordPress</h3>
+      <p>WordPress publishing, Yoast SEO, heading structure, URL optimization, image alt text, and Elementor.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Tools</h3>
+      <p>Google Search Console, Google Analytics, SEMrush, Ahrefs, and basic HTML/CSS.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="role">Founder &amp; Content Strategist — Ramedevia.com</div>
+      <div class="dates">Aug 2025 – Present · Remote, Pakistan</div>
+      <p>Built the website's SEO foundation and scaled traffic to over 5,000 monthly visitors within four months.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="role">SEO Content Writer / Publisher — All New Jobs Pakistan</div>
+      <div class="dates">2025 – Present · Remote, Pakistan</div>
+      <p>Researches and publishes job-related content optimized for search intent, readability, and freshness.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="role">Web Content Writer — QuickFix Plt Ltd</div>
+      <div class="dates">Jan 2024 – Present · Remote, Pakistan</div>
+      <p>Writes and optimizes SEO content and supports local SEO for service-based websites.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="role">SEO Specialist — Your Functional CMO</div>
+      <div class="dates">Jan 2024 – Nov 2025 · Remote, Pakistan</div>
+      <p>Delivered keyword research, on-page optimization, and technical/local SEO support for multiple client websites.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="role">SEO Specialist Intern — Time Business News</div>
+      <div class="dates">May 2023 – Dec 2023 · Remote, Pakistan</div>
+      <p>Supported keyword research, content formatting, internal linking, and basic technical SEO checks.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Certifications</h2>
+  <ul class="cert-list">
+    <li>Google Analytics Individual Qualification (GAIQ), 2025</li>
+    <li>HubSpot Content Marketing Certification, 2025</li>
+    <li>SEMrush SEO Toolkit Certification, 2025</li>
+  </ul>
+
+  <h2 class="section-title">Education</h2>
+  <p>Haris is currently pursuing a BS in Computer Science at Virtual University of Pakistan.</p>
+
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <details class="faq-item" open>
+    <summary>Who is Haris Altaf?</summary>
+    <p>Haris Altaf is an SEO specialist and content writer based in Abbottabad, Pakistan, working remotely with clients worldwide. He focuses on keyword research, on-page and technical SEO, local SEO, WordPress optimization, and SEO content writing.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What does Haris Altaf specialize in?</summary>
+    <p>He specializes in on-page SEO, local SEO, technical SEO basics, keyword research, competitor analysis, SEO content writing, and WordPress publishing using tools like Google Search Console, Google Analytics, SEMrush, and Ahrefs.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>How much experience does Haris Altaf have?</summary>
+    <p>He has more than three years of experience across SEO specialist, content writer, and content strategist roles for various companies and client projects.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What certifications does Haris Altaf hold?</summary>
+    <p>He holds the Google Analytics Individual Qualification (GAIQ), a HubSpot Content Marketing Certification, and a SEMrush SEO Toolkit Certification, all earned in 2025.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Where can I contact or hire Haris Altaf?</summary>
+    <p>He can be reached through his portfolio website or his LinkedIn profile, where his services, project history, and contact details are listed.</p>
+  </details>
+
+  <div class="cta">
+    <p>Want to see project work, testimonials, and services in more detail?</p>
+    <a class="primary" href="https://harisaltafseo-hub.github.io/HarisSEO/">View Portfolio</a>
+    <a class="secondary" href="https://www.linkedin.com/in/haris-altaf-6ab472381/">Connect on LinkedIn</a>
+  </div>
+
+  <div class="note">
+    Note: Some project statistics and testimonials on the portfolio site currently appear to be placeholder values. Verify specific claims (like client results) before publishing them as fact.
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Haris Altaf · SEO Specialist &amp; Content Writer
+</footer>
+
+</body>
+</html>
