@@ -435,3 +435,65 @@ a { text-decoration: none; }
   .timeline-item::before { left: -30px; width: 12px; height: 12px; top: 20px; }
   .btn { width: 100%; } /* Full width buttons on mobile */
 }
+
+/* ============================
+   SOCIAL PROFILES SECTION
+   ============================ */
+.social-profiles { 
+  padding: 60px 0; 
+  background: var(--accent-light); /* Adds a subtle contrast break between sections */
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.social-profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-primary);
+}
+
+.social-large-icon {
+  font-size: 48px;
+  color: var(--brand-primary);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-profile-card:hover .social-large-icon {
+  transform: scale(1.15);
+  color: var(--accent-blue);
+}
+
+.social-profile-card h3 {
+  font-size: 20px;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+
+.social-profile-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+}
