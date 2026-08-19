@@ -291,3 +291,95 @@ body {
 .text-muted { color: var(--text-light); }
 
 /* End of appended styles */
+
+/* =====================================================
+   Fix header and about layout
+   ===================================================== */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-item { margin: 0; }
+
+.nav-link {
+  color: rgba(230, 238, 248, 0.95);
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.nav-link:hover { color: #fff; background: rgba(255,255,255,0.03); }
+
+.nav-link-resume {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.45rem 0.8rem;
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+}
+
+/* Hamburger for smaller screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+}
+.hamburger span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; }
+
+/* Hero */
+.hero { padding-top: 110px; padding-bottom: 2rem; min-height: 60vh; display: block; }
+.hero-container { display: flex; align-items: flex-start; gap: 2rem; }
+.hero-content { max-width: 720px; }
+.hero-title { font-size: 2.25rem; color: var(--primary-dark); margin-bottom: 0.5rem; }
+.hero-subtitle { color: var(--text-light); margin-bottom: 1rem; font-weight: 600; }
+.hero-description { color: var(--text-dark); margin-bottom: 1rem; }
+
+/* About section */
+.about { padding: 4rem 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 420px; gap: 2rem; align-items: center; }
+.about-image img { width: 100%; border-radius: 12px; display: block; }
+.about-content p { color: var(--text-dark); }
+
+/* Responsive rules */
+@media (max-width: 900px) {
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+  .hero-container { flex-direction: column; }
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .nav-container { padding: 0 1rem; }
+  .hero-title { font-size: 1.75rem; }
+  .logo-text { display: none; }
+}
