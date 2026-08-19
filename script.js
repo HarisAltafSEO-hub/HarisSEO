@@ -5,148 +5,91 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 }
-
-/* ========== COUNTER ANIMATION ========== */
-const counterElements = document.querySelectorAll('[data-target]');
-let hasAnimated = false;
-
-const animateCounters = () => {
-    counterElements.forEach(element => {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
-        const start = 0;
-        const increment = target / (duration / 16);
-
-        let current = start;
-        const counter = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(counter);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 16);
-    });
-};
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasAnimated) {
-                hasAnimated = true;
-                animateCounters();
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statsObserver.observe(statsSection);
-}
-
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     });
 });
 
-/* ========== NAVBAR SCROLL EFFECT ========== */
-const navbar = document.querySelector('.navbar');
+/* ========== COUNTER ANIMATION ========== */
+const counters = document.querySelectorAll('.counter');
+const speed = 150;
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            updateCount();
+        }
+    });
+    observer.observe(counter);
 });
 
-/* ========== SMOOTH SCROLL ========== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+/* ========== 8D DYNAMIC MOUSE TILT EFFECT ========== */
+// This attaches the interactive 3D WebGL feel to all your cards
+const tiltCards = document.querySelectorAll('.js-tilt');
+
+tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        
+        // Calculate mouse position relative to center of the card
+        const x = e.clientX - rect.left; 
+        const y = e.clientY - rect.top; 
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate tilt angles (multiplier controls the depth intensity)
+        const tiltX = ((y - centerY) / centerY) * -10; 
+        const tiltY = ((x - centerX) / centerX) * 10;
+        
+        // Apply 3D Transform
+        card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.boxShadow = `0 30px 60px rgba(4, 57, 107, 0.15)`;
+    });
+
+    // Reset card when mouse leaves
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        card.style.boxShadow = `0 4px 6px -1px rgba(0, 0, 0, 0.05)`;
+        card.style.transition = 'transform 0.5s ease-out, box-shadow 0.5s ease';
+    });
+    
+    // Remove transition when hovering so tracking is instant and smooth
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'none'; 
     });
 });
 
-/* ========== SCROLL REVEAL ANIMATIONS ========== */
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.service-card, .skill-category, .project-card, .testimonial-card, .about-card, .info-card').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
-});
-
-/* ========== CONTACT FORM ========== */
+/* ========== CONTACT FORM SUBMISSION ========== */
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-
         const mailtoLink = `mailto:harisaltaf123450@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
         window.location.href = mailtoLink;
 
-        alert('Thank you for your message! Your email client will open shortly.');
+        alert('Thank you! Your email client will open shortly.');
         contactForm.reset();
     });
 }
-
-/* ========== SCROLL TO TOP BUTTON ========== */
-const scrollToTopButton = document.createElement('button');
-scrollToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollToTopButton.className = 'scroll-to-top';
-scrollToTopButton.setAttribute('aria-label', 'Scroll to top');
-document.body.appendChild(scrollToTopButton);
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopButton.classList.add('show');
-    } else {
-        scrollToTopButton.classList.remove('show');
-    }
-});
-
-scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-/* ========== INITIALIZATION ========== */
-console.log('Portfolio loaded successfully');
