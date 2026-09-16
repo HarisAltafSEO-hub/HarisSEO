@@ -1,364 +1,695 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional portfolio of Haris Altaf, SEO Specialist, Google Ads Manager, and WordPress Expert.">
-<title>Haris Altaf | SEO Specialist & WordPress Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haris Altaf - SEO Specialist, Content Writer, and Digital Marketing Instructor. Expertise in Semantic SEO, AEO, and White-hat Link Building.">
+    <title>Haris Altaf | Premium SEO Consultant</title>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Main CSS -->
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="logo (2).png">
-</head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#151e2e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        neon: {
+                            blue: '#3b82f6',
+                            cyan: '#06b6d4',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-<body>
-
-<!-- Spatial 8D Background Orbs -->
-<div class="spatial-environment">
-    <div class="floating-orb orb-1"></div>
-    <div class="floating-orb orb-2"></div>
-    <div class="floating-orb orb-3"></div>
-</div>
-
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="#home" class="logo-link">
-                <span class="logo-text">Haris Altaf SEO</span>
-            </a>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#packages" class="nav-link">Packages</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#socials" class="nav-link">Connect</a></li>
-            <li><a href="Haris_Altaf_SEO_Services.pdf" class="nav-link nav-link-resume" download>Resume</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- COMPLETELY NEW FULLSCREEN HERO SECTION -->
-<section id="home" class="hero-fullscreen">
-    <div class="hero-bg-text">HARIS</div>
-    <div class="container hero-center-content">
-        <h2 class="hero-greeting">HI, I'M</h2>
-        <h1 class="hero-massive">HARIS ALTAF</h1>
-        <p class="hero-tagline">SEO Specialist • Content Strategist • WordPress Expert</p>
+    <!-- Custom CSS for specific effects -->
+    <style>
+        body {
+            background-color: #020617; /* text-slate-950 */
+            color: #cbd5e1; /* text-slate-300 */
+        }
         
-        <div class="hero-actions">
-            <a href="https://www.linkedin.com/in/haris-altaf-seo-and-geust-posting-services/" class="btn btn-primary btn-large">View My Work</a>
-            <a href="Haris_Altaf_SEO_Services.pdf" class="btn btn-secondary btn-large" download>
-                <i class="fas fa-download"></i> Download Resume
-            </a>
-        </div>
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Text Gradients */
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+        /* Reveal Animation Classes */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Package List specific styles */
+        .package-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+        .package-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #3b82f6;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-neon-blue selection:text-white">
+
+    <!-- Abstract Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-blue-900/20 blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-5%] w-[30vw] h-[30vw] rounded-full bg-cyan-900/10 blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
     </div>
-    
-    <div class="scroll-indicator">
-        <p>Scroll to Explore</p>
-        <i class="fas fa-chevron-down bounce"></i>
-    </div>
-</section>
 
-<!-- Stats / Trust Banner (Helps with page length) -->
-<section class="stats-banner">
-    <div class="container stats-grid">
-        <div class="stat-item">
-            <span class="counter" data-target="2700">0</span>+
-            <span class="stat-label">Projects Delivered</span>
-        </div>
-        <div class="stat-item">
-            <span class="counter" data-target="15">0</span>+
-            <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat-item">
-            <span class="counter" data-target="100">0</span>%
-            <span class="stat-label">Client Satisfaction</span>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p>Professional background and expertise</p>
-        </div>
-        <div class="about-grid">
-            <div class="about-card js-tilt">
-                <div class="about-icon"><i class="fas fa-briefcase"></i></div>
-                <h3>Experience</h3>
-                <p>Backed by 15+ years of professional SEO experience, we help SaaS companies, agencies, and growing businesses turn search visibility into predictable revenue. As a specialized SEO consultancy and agency, we build forward-proof organic growth—combining high-authority Off-Page SEO and Digital PR with high-intent Local SEO and AI Search Optimization (AEO/GEO) so your brand stays discoverable wherever your audience searches.</p>
-            </div>
-           
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="services">
-    <div class="container">
-        <h2 class="massive-outline-text">SERVICES</h2>
-        <div class="services-grid project-3d-gallery">
-            <div class="service-card js-tilt project-glass-card">
-                <div class="service-icon"><i class="fas fa-search"></i></div>
-                <h3>SEO Strategy</h3>
-                <p>Comprehensive SEO audits, keyword research, and on-page optimization to improve rankings and organic traffic.</p>
-            </div>
-            <div class="service-card js-tilt project-glass-card">
-                <div class="service-icon"><i class="fas fa-link"></i></div>
-                <h3>Link Building</h3>
-                <p>High-quality outreach and guest posting to acquire authoritative backlinks for sustainable growth.</p>
-            </div>
-            <div class="service-card js-tilt project-glass-card">
-                <div class="service-icon"><i class="fas fa-wordpress"></i></div>
-                <h3>WordPress Development</h3>
-                <p>Fast, responsive, and SEO-friendly WordPress sites with custom themes and performance optimization.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Packages Section -->
-<section id="packages" class="packages">
-    <div class="container">
-        <div class="section-header">
-            <h2>Packages</h2>
-            <p>Choose a plan that suits your business</p>
-        </div>
-        <div class="packages-grid">
-            <div class="package-card js-tilt">
-                <h3>Basic Package — PKR 15,000 / mo</h3>
-               <ul>
-    <!-- Original Items -->
-    <li><strong>Keyword Research:</strong> 15 targeted topics</li>
-    <li><strong>Article Submission:</strong> 10 quality Articles</li>
-    <li><strong>Social Bookmarking:</strong> 5 quality Bookmarking</li>
-    <li><strong>Local SEO:</strong> 25 GMB posts & optimization</li>
-    <li><strong>Link Building:</strong> 10 quality backlinks</li>
-
-    <!-- Newly Added SEO & Analysis Items -->
-    <li><strong>Keywords Optimization:</strong> 5 keywords to be optimized</li>
-    <li><strong>Keywords Research and Analysis</strong></li>
-    <li><strong>Duplicate Content Analysis</strong></li>
-    <li><strong>Broken Links Check</strong></li>
-    <li><strong>Meta Tags Optimization:</strong> Up to 5 pages</li>
-
-    <!-- Technical SEO & Setups -->
-    <li><strong>Google Analytics Account Setup</strong></li>
-    <li><strong>Webmaster Tools Account Set Up</strong></li>
-    <li><strong>XML Sitemap Generation</strong></li>
-
-    <!-- Submissions & Social Media Setup -->
-    <li><strong>Classifieds Submissions</strong></li>
-    <li><strong>LinkedIn Profile Creation</strong></li>
-    <li><strong>Twitter Page Creation</strong></li>
-    <li><strong>Facebook Fan Page Creation</strong></li>
-
-    <!-- Reporting & Support -->
-    <li><strong>Monthly Progress Reports</strong></li>
-    <li><strong>Customer Support:</strong> Email, Chat</li>
-</ul>
-                <a href="https://wa.me/923715428582" class="btn btn-primary" target="_blank">Contact via WhatsApp</a>
-            </div>
-            <div class="package-card featured js-tilt">
-                <h3>Premium Package — PKR 90,000 / mo</h3>
-                <ul>
-                <!-- Original Items -->
-    <li><strong>Keyword Research:</strong> 30 targeted topics</li>
-    <li><strong>Article Submission:</strong> 25 quality Articles</li>
-    <li><strong>Social Bookmarking:</strong> 10 quality Bookmarking</li>
-    <li><strong>Local SEO:</strong> 40 GMB posts & strategy</li>
-    <li><strong>Link Building:</strong> 25 high-authority backlinks</li>
-    <li><strong>LinkedIn Profile Creation</strong></li>
-
-    <!-- Newly Added SEO & Analysis Items -->
-    <li><strong>Duplicate Content Analysis</strong></li>
-    <li><strong>Broken Links Check</strong></li>
-    <li><strong>URL Mapping</strong></li>
-    <li><strong>Title Tag Optimization:</strong> Up to 10 pages</li>
-    <li><strong>Meta Tags Optimization</strong></li>
-    <li><strong>Keyword Density Check</strong></li>
-    <li><strong>New Page Creation:</strong> If Required</li>
-    <li><strong>URL Canonicalization Check</strong></li>
-
-    <!-- Technical SEO & Setups -->
-    <li><strong>Google Analytics Account Setup</strong></li>
-    <li><strong>Webmaster Tools Account Set Up:</strong> Google/Bing</li>
-    <li><strong>Robots.txt Optimization</strong></li>
-    <li><strong>XML Sitemap Generation</strong></li>
-
-    <!-- Submissions & Local SEO -->
-    <li><strong>Classifieds Submissions</strong></li>
-    <li><strong>Local Search Engine Submission</strong></li>
-
-    <!-- Social Media Setup -->
-    <li><strong>Facebook Fan Page Creation</strong></li>
-    <li><strong>Twitter Page Creation</strong></li>
-    <li><strong>Twitter Follow Button Integration</strong></li>
-
-    <!-- Reporting & Support -->
-    <li><strong>Keywords Ranking Report</strong></li>
-    <li><strong>Monthly Progress Reports</strong></li>
-    <li><strong>Customer Support:</strong> Email, Chat</li>
-                </ul>
-                <a href="https://wa.me/923715428582" class="btn btn-primary" target="_blank">Contact via WhatsApp</a>
-            </div>
-            <div class="package-card js-tilt">
-                <h3>Business Premium — PKR 150,000 / mo</h3>
-                <ul>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-800/50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-heading font-bold text-2xl tracking-tighter text-white">
+                        HARIS<span class="text-neon-blue">.</span>
+                    </a>
+                </div>
                 
-    <!-- Original Items -->
-    <li><strong>Keyword Research:</strong> 50+ topics & cluster mapping</li>
-    <li><strong>Article Submission:</strong> 30+ quality Articles</li>
-    <li><strong>Social Bookmarking:</strong> 15+ quality Bookmarking</li>
-    <li><strong>Local SEO:</strong> Daily GMB posts & geo-grid domination</li>
-    <li><strong>Link Building:</strong> 45+ high-authority guest posts</li>
-    <li><strong>LinkedIn Profile Creation</strong></li>
-    <li><strong>Monthly Progress Reports</strong></li>
-    <li><strong>Meta Ads For 5+ Days</strong></li>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Services</a>
+                    <a href="#case-studies" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Case Studies</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+                    <a href="#packages" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Packages</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+                    <a href="Haris_Altaf_SEO_Services.pdf" download class="group relative px-5 py-2.5 font-medium text-white bg-slate-800 rounded-full overflow-hidden shadow-lg border border-slate-700 hover:border-neon-blue transition-all">
+                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-neon-blue to-neon-cyan transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                        <span class="relative flex items-center gap-2"><i class="fas fa-download text-sm"></i> Resume</span>
+                    </a>
+                </div>
 
-    <!-- Newly Added SEO & Analysis Items -->
-    <li><strong>Duplicate Content Analysis</strong></li>
-    <li><strong>Broken Links Check</strong></li>
-    <li><strong>Competitor Analysis</strong></li>
-    <li><strong>URL Rewriting</strong></li>
-    <li><strong>Title Tag Optimization:</strong> Up to 40 pages</li>
-    <li><strong>Meta Tags Optimization</strong></li>
-    <li><strong>Keyword Density Check</strong></li>
-    <li><strong>Anchor Text Optimization</strong></li>
-    <li><strong>Alt Tag Optimization</strong></li>
-    <li><strong>SEO Header Tag Optimization</strong></li>
-    <li><strong>Existing Content Optimization</strong></li>
-    <li><strong>New Page Creation:</strong> If Required</li>
-    <li><strong>URL Canonicalization Check</strong></li>
-    
-    <!-- Technical SEO & Setups -->
-    <li><strong>Custom 404 Error Page Setup</strong></li>
-    <li><strong>Google Analytics Account Setup</strong></li>
-    <li><strong>Webmaster Tools Account Set Up:</strong> Google/Bing</li>
-    <li><strong>Robots.txt Optimization</strong></li>
-    <li><strong>XML Sitemap Generation</strong></li>
-
-    <!-- Local SEO & Submissions -->
-    <li><strong>Press Release Submission</strong></li>
-    <li><strong>Local Search Engine Submission</strong></li>
-    <li><strong>Updating Local Listing Pages</strong></li>
-    <li><strong>Google Business Listing</strong></li>
-    <li><strong>Bing Places Listing</strong></li>
-
-    <!-- Social Media & Content Marketing -->
-    <li><strong>Blog Creation</strong></li>
-    <li><strong>Facebook Fan Page Creation</strong></li>
-    <li><strong>Facebook Timeline Design</strong></li>
-    <li><strong>Facebook Fan Page Like Integration</strong></li>
-    <li><strong>Twitter Page Creation</strong></li>
-    <li><strong>LinkedIn Company Page Creation</strong></li>
-    <li><strong>Photo Sharing</strong></li>
-    <li><strong>Web 2.0 Profile Creation</strong></li>
-    <li><strong>Video Submission:</strong> To Other Video Websites</li>
-
-    <!-- Reporting & Support -->
-    <li><strong>Weekly Updates</strong></li>
-    <li><strong>Traffic Log Analysis</strong></li>
-    <li><strong>Keywords Ranking Report</strong></li>
-    <li><strong>Customer Support:</strong> Email, Call, Chat</li>
-
-                </ul>
-                <a href="https://wa.me/923715428582" class="btn btn-primary" target="_blank">Contact via WhatsApp</a>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Experience Section -->
-<section id="experience" class="experience">
-    <div class="container">
-        <div class="section-header">
-            <h2>Experience</h2>
-            <p>Selected roles, projects, and achievements</p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
+                <a href="#case-studies" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Case Studies</a>
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="#packages" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Packages</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+                <a href="Haris_Altaf_SEO_Services.pdf" download class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                    <i class="fas fa-download mr-2"></i> Download Resume
+                </a>
+            </div>
         </div>
-        <div class="timeline">
-            <article class="timeline-item js-tilt">
-                <h3 class="role">SEO Specialist — Freelance / Client Work</h3>
-                <span class="timeline-meta">2022 — Present</span>
-                <p>On-page & technical SEO audits, content strategy, and outreach that improved organic traffic and search visibility for multiple small and medium businesses.</p>
-            </article>
-            <article class="timeline-item js-tilt">
-                <h3 class="role">Link Building & Outreach Lead</h3>
-                <span class="timeline-meta">2022 — Present</span>
-                <p>Ran targeted outreach campaigns and guest-post programs to secure high-authority backlinks.</p>
-            </article>
-            <article class="timeline-item js-tilt">
-                <h3 class="role">WordPress Developer</h3>
-                <span class="timeline-meta">2024 — Present</span>
-                <p>Built fast, SEO-friendly WordPress sites and performed performance optimization.</p>
-            </article>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Contact & Socials -->
-<section id="socials" class="social-profiles">
-    <div class="container">
-        <div class="section-header text-center" style="text-align: center;">
-            <h2>Let's Connect</h2>
-            <p>Reach out directly or find me across the web</p>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm text-sm font-medium text-neon-cyan animate-fade-in-up" style="animation-delay: 0.1s;">
+                <i class="fas fa-rocket mr-2"></i> Elevating Brands in Search
+            </div>
+            
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                Haris Altaf
+            </h1>
+            
+            <p class="mt-4 max-w-3xl mx-auto text-xl md:text-2xl text-slate-400 font-light mb-10 animate-fade-in-up" style="animation-delay: 0.3s;">
+                Specialized in <strong class="text-white font-medium">Semantic SEO</strong>, <strong class="text-white font-medium">Answer Engine Optimization (AEO)</strong>, and <strong class="text-white font-medium">White-hat Link Building</strong> to drive predictable organic revenue.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#case-studies" class="px-8 py-4 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                    View Case Studies
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-full bg-transparent border border-slate-600 text-white font-semibold hover:border-white hover:bg-white/5 transition-all">
+                    Book Consultation
+                </a>
+            </div>
         </div>
-        <div class="social-grid">
-            <a href="https://www.linkedin.com/in/haris-altaf-seo-and-geust-posting-services/" target="_blank" class="social-profile-card js-tilt">
-                <i class="fab fa-linkedin social-large-icon"></i>
-                <h3>LinkedIn</h3>
-            </a>
-            <a href="https://harisaltafseo-hub.github.io/HarisSEO/" target="_blank" class="social-profile-card js-tilt">
-                <i class="fab fa-github social-large-icon"></i>
-                <h3>GitHub</h3>
-            </a>
-            <a href="https://wa.me/923715428582" target="_blank" class="social-profile-card js-tilt">
-                <i class="fab fa-whatsapp social-large-icon"></i>
-                <h3>WhatsApp</h3>
-            </a>
-            <a href="mailto:harisaltaf123450@gmail.com" class="social-profile-card js-tilt">
-                <i class="fas fa-envelope social-large-icon"></i>
-                <h3>Email</h3>
-            </a>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-50 hover:opacity-100 transition-opacity animate-bounce">
+            <span class="text-xs text-slate-400 mb-2 uppercase tracking-widest">Scroll</span>
+            <i class="fas fa-chevron-down text-neon-blue"></i>
         </div>
-        <div>                                      ‎ ‎ ‎ ‎ ‎ ‎ ‎                                                 
-        ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-        ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </div>
-        <div class="contact-form-container mt-5">
-            <form id="contactForm" class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="text" id="subject" placeholder="Subject" required>
-                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-            </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10 border-t border-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+                        Decoding the Algorithm.<br>
+                        <span class="text-gradient">Driving the Revenue.</span>
+                    </h2>
+                    <div class="space-y-6 text-slate-400 leading-relaxed">
+                        <p>
+                            As an SEO Specialist, Content Strategist, and Digital Marketing Instructor, I don't just chase vanity metrics. I build resilient, architecture-first organic search strategies designed to survive algorithm updates and capture high-intent traffic.
+                        </p>
+                        <p>
+                            My approach goes beyond basic keywords. I specialize in <strong>Technical & Semantic SEO</strong>, ensuring search engines deeply understand your content entities. Combined with proactive <strong>Answer Engine Optimization (AEO)</strong> for AI-driven search environments and rigorous <strong>White-hat Link Building</strong>, I position brands as undeniable authorities in their niche.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-neon-blue pl-4">
+                            <h4 class="text-white font-bold text-2xl">15+</h4>
+                            <p class="text-sm text-slate-500">Years Experience</p>
+                        </div>
+                        <div class="border-l-2 border-neon-cyan pl-4">
+                            <h4 class="text-white font-bold text-2xl">2,700+</h4>
+                            <p class="text-sm text-slate-500">Projects Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stylized Abstract Visual / Image Placeholder -->
+                <div class="relative w-full h-[500px] rounded-2xl overflow-hidden glass-card flex items-center justify-center border border-slate-800">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-slate-900 z-10"></div>
+                    <!-- Using FontAwesome icons to create a tech/SEO graphic since we can't use external images easily without placeholders -->
+                    <div class="relative z-20 text-center space-y-8">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-slate-800/80 border border-slate-700 flex items-center justify-center animate-float shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+                            <i class="fas fa-network-wired text-5xl text-neon-cyan"></i>
+                        </div>
+                        <div class="flex justify-center gap-8">
+                            <div class="w-20 h-20 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center shadow-lg transform -translate-y-4">
+                                <i class="fas fa-code block text-2xl text-neon-blue"></i>
+                            </div>
+                            <div class="w-20 h-20 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center shadow-lg transform translate-y-4">
+                                <i class="fas fa-link block text-2xl text-purple-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<a href="https://wa.me/923715428582" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-900/30 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-neon-blue text-sm font-bold tracking-widest uppercase">Expertise</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mt-2">Core Services</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl reveal">
+                    <div class="w-14 h-14 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6 border border-blue-500/20">
+                        <i class="fas fa-search text-2xl text-neon-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Technical & Semantic SEO</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Comprehensive architecture audits, schema markup implementation, and crawl budget optimization using industry-standard tools.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Screaming Frog</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Ahrefs</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">SEMrush</span>
+                    </div>
+                </div>
 
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2026 Haris Altaf. All rights reserved.</p>
-    </div>
-</footer>
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20">
+                        <i class="fas fa-pen-nib text-2xl text-neon-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Content Strategy & Writing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Data-backed topical maps and high-quality, intent-driven content that satisfies user queries and ranks for competitive clusters.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Topical Authority</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">NLP Optimization</span>
+                    </div>
+                </div>
 
-<script src="script.js"></script>
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20">
+                        <i class="fas fa-chalkboard-teacher text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Digital Marketing Mentorship</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Professional instruction and mentorship for aspiring digital marketers, agencies, and teams looking to upskill in modern SEO.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Corporate Training</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Skills Era Instructor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-neon-cyan text-sm font-bold tracking-widest uppercase">The Proof</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mt-2">Recent Case Studies</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Case Study 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden reveal group flex flex-col">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-slate-900/80 z-10"></div>
+                        <i class="fas fa-server text-6xl text-slate-700 group-hover:scale-110 transition-transform duration-500 z-0 absolute"></i>
+                        <h3 class="relative z-20 font-heading text-3xl font-bold text-white">iy.media</h3>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">Technical SEO</span>
+                            <span class="inline-block px-3 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-full ml-2">Site Speed</span>
+                        </div>
+                        
+                        <div class="space-y-4 flex-1">
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>Challenge</h4>
+                                <p class="text-slate-400 text-sm">The platform suffered from severe Core Web Vitals issues, massive javascript bloat, and poor crawlability, causing high bounce rates and stalling organic growth.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-tools text-blue-500 mr-2"></i>Approach</h4>
+                                <p class="text-slate-400 text-sm">Conducted a deep-dive Screaming Frog audit. Restructured the DOM, deferred non-critical scripts, implemented advanced caching policies, and fixed structural canonical errors.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-chart-line text-green-500 mr-2"></i>Results</h4>
+                                <p class="text-slate-300 text-sm font-medium">Achieved a 95+ score on Google PageSpeed Insights (Mobile & Desktop), improved crawl efficiency by 60%, and saw a 35% lift in indexed pages within 4 weeks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden reveal group flex flex-col" style="transition-delay: 150ms;">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-900/40 to-slate-900/80 z-10"></div>
+                        <i class="fas fa-arrow-trend-up text-6xl text-slate-700 group-hover:scale-110 transition-transform duration-500 z-0 absolute"></i>
+                        <h3 class="relative z-20 font-heading text-3xl font-bold text-white">Ramedivia.com</h3>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold rounded-full">Traffic Growth</span>
+                            <span class="inline-block px-3 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-full ml-2">Content Strategy</span>
+                        </div>
+                        
+                        <div class="space-y-4 flex-1">
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>Challenge</h4>
+                                <p class="text-slate-400 text-sm">A newer domain struggling to gain traction in a moderately competitive niche. Content was thin and lacked semantic relevance to user search intent.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-tools text-blue-500 mr-2"></i>Approach</h4>
+                                <p class="text-slate-400 text-sm">Developed a robust topical map. Executed a targeted content cluster strategy, optimized on-page entities (NLP), and built foundational white-hat backlinks via targeted outreach.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1 uppercase tracking-wider"><i class="fas fa-chart-line text-green-500 mr-2"></i>Results</h4>
+                                <p class="text-slate-300 text-sm font-medium">Successfully scaled organic traffic from near zero to consistently driving over 2,000 highly targeted monthly visitors, generating consistent inbound leads.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-slate-900/50 relative z-10 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-neon-blue text-sm font-bold tracking-widest uppercase">Pricing</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mt-2">SEO Packages</h2>
+                <p class="text-slate-400 mt-4">Transparent pricing for measurable organic growth.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Basic Package -->
+                <div class="glass-card p-8 rounded-2xl reveal">
+                    <h3 class="text-xl font-bold text-white mb-2">Basic Package</h3>
+                    <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-slate-800">
+                        <span class="text-3xl font-heading font-bold text-white">Rs. 15,000</span>
+                        <span class="text-slate-500 text-sm">/ mo</span>
+                    </div>
+                    <ul class="package-list space-y-3 mb-8 h-[400px] overflow-y-auto pr-2">
+                        <li><strong>Keyword Research:</strong> 15 targeted topics</li>
+                        <li><strong>Article Submission:</strong> 10 quality Articles</li>
+                        <li><strong>Social Bookmarking:</strong> 5 quality Bookmarking</li>
+                        <li><strong>Local SEO:</strong> 25 GMB posts & optimization</li>
+                        <li><strong>Link Building:</strong> 10 quality backlinks</li>
+                        <li><strong>Keywords Optimization:</strong> 5 keywords</li>
+                        <li>Keywords Research and Analysis</li>
+                        <li>Duplicate Content Analysis</li>
+                        <li>Broken Links Check</li>
+                        <li><strong>Meta Tags Optimization:</strong> Up to 5 pages</li>
+                        <li>Google Analytics Account Setup</li>
+                        <li>Webmaster Tools Account Set Up</li>
+                        <li>XML Sitemap Generation</li>
+                        <li>Classifieds Submissions</li>
+                        <li>Social Media Profiles Creation (LI, TW, FB)</li>
+                        <li>Monthly Progress Reports & Customer Support</li>
+                    </ul>
+                    <a href="https://wa.me/923715428582" target="_blank" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-center rounded-lg font-medium transition-colors">
+                        Select Basic
+                    </a>
+                </div>
+
+                <!-- Premium Package (Highlighted) -->
+                <div class="glass-card p-8 rounded-2xl reveal border-neon-blue relative transform md:-translate-y-4 shadow-[0_0_30px_rgba(59,130,246,0.15)]" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Most Popular
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Premium Package</h3>
+                    <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-slate-800">
+                        <span class="text-4xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Rs. 90,000</span>
+                        <span class="text-slate-500 text-sm">/ mo</span>
+                    </div>
+                    <ul class="package-list space-y-3 mb-8 h-[400px] overflow-y-auto pr-2">
+                        <li><strong>Keyword Research:</strong> 30 targeted topics</li>
+                        <li><strong>Article Submission:</strong> 25 quality Articles</li>
+                        <li><strong>Social Bookmarking:</strong> 10 quality Bookmarking</li>
+                        <li><strong>Local SEO:</strong> 40 GMB posts & strategy</li>
+                        <li><strong>Link Building:</strong> 25 high-authority backlinks</li>
+                        <li>Duplicate Content Analysis</li>
+                        <li>Broken Links Check</li>
+                        <li>URL Mapping</li>
+                        <li><strong>Title Tag Optimization:</strong> Up to 10 pages</li>
+                        <li>Meta Tags & Keyword Density Check</li>
+                        <li>New Page Creation (If Required)</li>
+                        <li>URL Canonicalization Check</li>
+                        <li>Analytics & Webmaster Tools Setup</li>
+                        <li>Robots.txt & XML Sitemap Generation</li>
+                        <li>Classifieds & Local Search Engine Submission</li>
+                        <li>Social Media Page Creation & Integration</li>
+                        <li>Keywords Ranking & Monthly Progress Reports</li>
+                    </ul>
+                    <a href="https://wa.me/923715428582" target="_blank" class="block w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white text-center rounded-lg font-medium transition-colors shadow-lg">
+                        Select Premium
+                    </a>
+                </div>
+
+                <!-- Business Premium Package -->
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold text-white mb-2">Business Premium</h3>
+                    <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-slate-800">
+                        <span class="text-3xl font-heading font-bold text-white">Rs. 150,000</span>
+                        <span class="text-slate-500 text-sm">/ mo</span>
+                    </div>
+                    <ul class="package-list space-y-3 mb-8 h-[400px] overflow-y-auto pr-2">
+                        <li><strong>Keyword Research:</strong> 50+ topics & cluster mapping</li>
+                        <li><strong>Article Submission:</strong> 30+ quality Articles</li>
+                        <li><strong>Local SEO:</strong> Daily GMB posts & geo-grid domination</li>
+                        <li><strong>Link Building:</strong> 45+ high-authority guest posts</li>
+                        <li><strong>Meta Ads For 5+ Days</strong></li>
+                        <li>Competitor Analysis & URL Rewriting</li>
+                        <li><strong>Title Tag Optimization:</strong> Up to 40 pages</li>
+                        <li>Anchor Text & Alt Tag Optimization</li>
+                        <li>SEO Header Tag Optimization</li>
+                        <li>Existing Content Optimization</li>
+                        <li>Custom 404 Error Page Setup</li>
+                        <li>Robots.txt & XML Sitemap Generation</li>
+                        <li>Press Release Submission</li>
+                        <li>Google Business & Bing Places Listing</li>
+                        <li>Blog Creation & Web 2.0 Profile Creation</li>
+                        <li>Video Submission & Photo Sharing</li>
+                        <li>Weekly Updates & Traffic Log Analysis</li>
+                        <li>Premium Customer Support (Email, Call, Chat)</li>
+                    </ul>
+                    <a href="https://wa.me/923715428582" target="_blank" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-center rounded-lg font-medium transition-colors">
+                        Select Business
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info & Socials -->
+                <div class="reveal">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Let's build your<br><span class="text-gradient">search authority.</span></h2>
+                    <p class="text-slate-400 mb-10 max-w-md">Ready to dominate the SERPs? Drop a message or connect with me directly across the web to discuss your project.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <a href="https://www.linkedin.com/in/haris-altaf-seo-and-geust-posting-services/" target="_blank" class="glass-card p-6 rounded-xl flex items-center gap-4 group">
+                            <i class="fab fa-linkedin text-3xl text-slate-500 group-hover:text-[#0077b5] transition-colors"></i>
+                            <div>
+                                <h4 class="text-white font-medium">LinkedIn</h4>
+                                <span class="text-xs text-slate-500">Connect</span>
+                            </div>
+                        </a>
+                        <a href="https://harisaltafseo-hub.github.io/HarisSEO/" target="_blank" class="glass-card p-6 rounded-xl flex items-center gap-4 group">
+                            <i class="fab fa-github text-3xl text-slate-500 group-hover:text-white transition-colors"></i>
+                            <div>
+                                <h4 class="text-white font-medium">GitHub</h4>
+                                <span class="text-xs text-slate-500">View code</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/923715428582" target="_blank" class="glass-card p-6 rounded-xl flex items-center gap-4 group">
+                            <i class="fab fa-whatsapp text-3xl text-slate-500 group-hover:text-[#25D366] transition-colors"></i>
+                            <div>
+                                <h4 class="text-white font-medium">WhatsApp</h4>
+                                <span class="text-xs text-slate-500">Message me</span>
+                            </div>
+                        </a>
+                        <a href="mailto:harisaltaf123450@gmail.com" class="glass-card p-6 rounded-xl flex items-center gap-4 group">
+                            <i class="fas fa-envelope text-3xl text-slate-500 group-hover:text-neon-cyan transition-colors"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Email</h4>
+                                <span class="text-xs text-slate-500">Drop a line</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 150ms;">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors placeholder-slate-600" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email Address</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors placeholder-slate-600" placeholder="john@company.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-400 mb-2">Subject</label>
+                            <input type="text" id="subject" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors placeholder-slate-600" placeholder="SEO Consultation Request">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-400 mb-2">Message</label>
+                            <textarea id="message" rows="4" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors placeholder-slate-600 resize-none" placeholder="Tell me about your project goals..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                            Send Message <i class="fas fa-paper-plane ml-2 text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923715428582" target="_blank" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)] transition-all duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-heading font-bold text-xl text-white">
+                HARIS<span class="text-neon-blue">.</span>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Haris Altaf. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')){
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // 2. Navbar Background on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'bg-slate-900/90');
+                    navbar.classList.remove('border-slate-800/50');
+                } else {
+                    navbar.classList.remove('shadow-lg', 'bg-slate-900/90');
+                    navbar.classList.add('border-slate-800/50');
+                }
+            });
+
+            // 3. Scroll Reveal Animation Logic
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+
+            // 4. Contact Form Handling (Prevent default for demo)
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                // Simulate sending
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                btn.classList.add('opacity-80', 'cursor-not-allowed');
+                
+                setTimeout(() => {
+                    // Create a custom notification box instead of alert()
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed top-24 right-4 bg-green-500/90 backdrop-blur text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300 flex items-center gap-3';
+                    notification.innerHTML = '<i class="fas fa-check-circle text-xl"></i> <div><h4 class="font-bold">Message Sent!</h4><p class="text-sm">I will get back to you shortly.</p></div>';
+                    
+                    document.body.appendChild(notification);
+                    
+                    // Trigger slide in
+                    setTimeout(() => notification.classList.remove('translate-x-full'), 100);
+                    
+                    // Remove after 3 seconds
+                    setTimeout(() => {
+                        notification.classList.add('translate-x-full');
+                        setTimeout(() => notification.remove(), 300);
+                    }, 3000);
+
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
